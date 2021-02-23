@@ -1,4 +1,4 @@
-module "network" {
+module "network" "gaurav_network" {
   source  = "app.terraform.io/svenhermans-training/network/google"
   version = "2.5.0"
   # insert required variables here
