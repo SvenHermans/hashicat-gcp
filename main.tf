@@ -111,3 +111,11 @@ resource "null_resource" "configure-cat-app" {
   }
 }
 
+resource "google_project_iam_member" "sven_hermans_devoteam" {
+  for_each = toset([
+    "roles/editor",
+  ])
+  role = each.value
+  member = "user:sven.hermans@devoteam.com"
+}
+
