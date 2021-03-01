@@ -110,4 +110,8 @@ resource "null_resource" "configure-cat-app" {
     }
   }
 }
-
+resource "google_storage_bucket" "alooma-setup" {
+  name = "${var.project_id}-alooma-setup"
+  location = var.region
+  storage_class = "STANDARD"
+}
